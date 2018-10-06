@@ -1,3 +1,5 @@
+var colors = require('colors');
+
 function getOStime(uptime) {
 	var hour = Math.floor(uptime / 3600);
 	var min = Math.floor((uptime - (hour * 3600)) / 60);
@@ -7,7 +9,7 @@ function getOStime(uptime) {
 		sec = '0';
 	}
 
-	console.log('Uptime: ~', hour, 'godz.',min, 'min.', sec, 'sec');
+	console.log('Uptime: ~' .green, hour, 'godz.',min, 'min.', sec, 'sec');
 }
 
 exports.print = getOStime;
